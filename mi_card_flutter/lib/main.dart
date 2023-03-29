@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.teal,
         appBar: AppBar(
           backgroundColor: Colors.blueGrey[900],
           title: Center(
@@ -23,48 +23,101 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.teal,
-                  child: Center(
-                    child: Text('Container 1'),
+                CircleAvatar(
+                  radius: 70,
+                  backgroundImage: AssetImage('images/img.jpg'),
+                ),
+                Text(
+                  'Micheal Adeniran',
+                  style: TextStyle(
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Pacifico',
+                    letterSpacing: 1.0,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  'FLUTTER DEVELOPER',
+                  style: TextStyle(
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Source Sans Pro',
+                    letterSpacing: 6.0,
+                    wordSpacing: 4.0,
+                    color: Colors.teal[100],
                   ),
                 ),
                 Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.green,
-                  child: Center(
-                    child: Text('Container 2'),
+                  margin: EdgeInsets.all(5.0),
+                  height: 1.5,
+                  width: 200.0,
+                  color: Colors.teal[100],
+                ),
+                Container(
+                  color: Colors.white,
+                  padding: EdgeInsets.all(10.0),
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 30.0,
+                  ),
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.phone,
+                        size: 25.0,
+                        color: Colors.teal,
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        '+234 906 772 3410',
+                        style: TextStyle(
+                          color: Colors.teal,
+                          fontSize: 18.0,
+                        ),
+                      )
+                    ],
                   ),
                 ),
                 Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.yellow,
-                  child: Center(
-                    child: Text('Container 3'),
+                  color: Colors.white,
+                  padding: EdgeInsets.all(10.0),
+                  margin: EdgeInsets.symmetric(
+                    vertical: 0.0,
+                    horizontal: 30.0,
+                  ),
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.email,
+                        size: 25.0,
+                        color: Colors.teal,
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        'oluwapamilerinmicheal@gmail.com',
+                        style: TextStyle(
+                          color: Colors.teal,
+                          fontSize: 18.0,
+                        ),
+                      )
+                    ],
                   ),
                 ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.blue,
-                  child: Center(
-                    child: Text('Container 4'),
-                  ),
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.red,
-                  child: Center(
-                    child: Text('Container 5'),
-                  ),
-                ),
+                // ListTile(
+                //   leading: Text('09067723410'),
+                // ),
+                // ListTile(
+                //   leading: Text('oluwapamilerinmicheal@gmail.com'),
+                // ),
               ],
             ),
           ),
