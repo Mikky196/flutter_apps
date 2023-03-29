@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(
@@ -16,9 +17,8 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         appBar: AppBar(
           backgroundColor: Colors.blueGrey[900],
-          title: Center(
-            child: Text('My Card'),
-          ),
+          title: Text('My Card'),
+          centerTitle: true,
         ),
         body: SafeArea(
           child: Center(
@@ -56,62 +56,62 @@ class MyApp extends StatelessWidget {
                   width: 200.0,
                   color: Colors.teal[100],
                 ),
-                Container(
-                  color: Colors.white,
-                  padding: EdgeInsets.all(10.0),
+                Card(
                   margin: EdgeInsets.symmetric(
                     vertical: 10.0,
                     horizontal: 30.0,
                   ),
-                  child: Row(
-                    // mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone,
-                        size: 25.0,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        '+234 906 772 3410',
-                        style: TextStyle(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.phone,
                           color: Colors.teal,
-                          fontSize: 18.0,
+                          size: 25.0,
                         ),
-                      )
-                    ],
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Text(
+                          '+234 906 772 3410',
+                          style: TextStyle(
+                            color: Colors.teal,
+                            fontSize: 18.0,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-                Container(
-                  color: Colors.white,
-                  padding: EdgeInsets.all(10.0),
+                Card(
                   margin: EdgeInsets.symmetric(
-                    vertical: 0.0,
+                    vertical: 10.0,
                     horizontal: 30.0,
                   ),
-                  child: Row(
-                    // mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.email,
-                        size: 25.0,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        'oluwapamilerinmicheal@gmail.com',
-                        style: TextStyle(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.email,
                           color: Colors.teal,
-                          fontSize: 18.0,
+                          size: 25.0,
                         ),
-                      )
-                    ],
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Text(
+                          'oluwapamilerinmicheal@gmail.com',
+                          style: TextStyle(
+                            color: Colors.teal,
+                            fontSize: 18.0,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
+                )
                 // ListTile(
                 //   leading: Text('09067723410'),
                 // ),
@@ -143,3 +143,60 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// Container(
+// color: Colors.white,
+// padding: EdgeInsets.all(10.0),
+// margin: EdgeInsets.symmetric(
+// vertical: 10.0,
+// horizontal: 30.0,
+// ),
+// child: Row(
+// // mainAxisAlignment: MainAxisAlignment.center,
+// children: <Widget>[
+// Icon(
+// Icons.phone,
+// size: 25.0,
+// color: Colors.teal,
+// ),
+// SizedBox(
+// width: 10.0,
+// ),
+// Text(
+// '+234 906 772 3410',
+// style: TextStyle(
+// color: Colors.teal,
+// fontSize: 18.0,
+// ),
+// )
+// ],
+// ),
+// ),
+// Container(
+// color: Colors.white,
+// padding: EdgeInsets.all(10.0),
+// margin: EdgeInsets.symmetric(
+// vertical: 0.0,
+// horizontal: 30.0,
+// ),
+// child: Row(
+// // mainAxisAlignment: MainAxisAlignment.center,
+// children: <Widget>[
+// Icon(
+// Icons.email,
+// size: 25.0,
+// color: Colors.teal,
+// ),
+// SizedBox(
+// width: 10.0,
+// ),
+// Text(
+// 'oluwapamilerinmicheal@gmail.com',
+// style: TextStyle(
+// color: Colors.teal,
+// fontSize: 18.0,
+// ),
+// )
+// ],
+// ),
+// ),
